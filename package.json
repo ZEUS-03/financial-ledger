@@ -1,0 +1,24 @@
+{
+  "name": "transaction-ledger-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Atomic transaction ledger assessment API",
+  "engines": {
+    "node": ">=22.21.0"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "dev": "node --watch src/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:coverage": "node --experimental-test-coverage --test tests/*.test.mjs",
+    "check": "node --check src/app.mjs && node --check src/ledger.mjs && node --check src/database.mjs && node --check src/validation.mjs && node --check src/errors.mjs && node --check src/server.mjs"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC"
+}
